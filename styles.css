@@ -1,0 +1,276 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.header {
+    text-align: center;
+    background-color: #007BFF;
+    color: white;
+    padding: 20px;
+}
+.header p {
+    font-family: 'Playfair Display', serif; /* Elegant serif font */
+    font-size: 20px; /* Smaller, professional size */
+    font-weight: 400; /* Normal weight for a cleaner look */
+    color: white; /* Contrast against the blue background */
+    text-align: center; /* Center-align the text */
+    margin-top: 5px; /* Adjust spacing for smaller size */
+}
+.wizard-container {
+    display: flex;
+    height: 100vh;
+}
+.sidebar {
+    width: 300px;
+    background: #f8f9fa;
+    padding: 10px;
+    border-right: 1px solid #dee2e6;
+}
+.steps-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.steps-list .step-item {
+    padding: 10px;
+    border-bottom: 1px solid #dee2e6;
+    cursor: pointer;
+}
+.steps-list .step-item.active {
+    background-color: #007BFF;
+    color: white;
+}
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+.step {
+    display: none;
+}
+.step.active {
+    display: block;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+label {
+    font-weight: bold;
+}
+textarea, input[type="text"], select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+button {
+    padding: 10px 15px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.next-btn {
+    background-color: #28a745;
+    color: white;
+}
+.prev-btn {
+    background-color: #ffc107;
+    color: white;
+}
+.help-text {
+    display: none; /* Hide by default */
+    background-color: #f8f9fa;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+.help-icon {
+    cursor: pointer;
+    color: #007BFF;
+    margin-left: 5px;
+}
+#save-btn, #new-assessment-btn, #finish-btn {
+    background-color: #007BFF;
+    color: white;
+}
+#help-text {
+    display: none; /* Nasconde il testo di aiuto all'avvio */
+}
+/* Fancy Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    table-layout: fixed;
+}
+table th, table td {
+    border: 1px solid #dee2e6;
+    padding: 10px;
+    text-align: left;
+}
+table th {
+    background-color: #007BFF;
+    color: white;
+}
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+/* Adjust column sizes */
+table th:nth-child(1), table td:nth-child(1) {
+    width: 30%;
+}
+table th:nth-child(2), table td:nth-child(2) {
+    width: 70%;
+}
+/* Add spacing for Decision field */
+.decision-section {
+    margin-top: 20px;
+}
+/* Styling for main.html */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    text-align: center;
+    background-color: #007BFF;
+    color: white;
+    padding: 20px;
+}
+
+.content {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.image-container {
+    margin: 20px 0;
+}
+
+.ra-image {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #007BFF;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.ra-image:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.description {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+    margin-top: 20px;
+}
+/* Style for RA Image to look like a compact button */
+.ra-button {
+    max-width: 480px; /* Smaller maximum width for the image */
+    height: auto; /* Maintain aspect ratio */
+    display: inline-block; /* Ensure inline button-like display */
+    border: 2px solid #007BFF; /* Button border */
+    border-radius: 6px; /* Slightly rounded corners */
+    padding: 5px; /* Reduced padding for compact size */
+    background-color: #007BFF; /* Button background color */
+    color: white; /* Text color (optional) */
+    text-align: center; /* Align text inside the button (if any) */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.2s, box-shadow 0.2s; /* Hover effect */
+}
+
+.ra-button:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+    background-color: #0056b3; /* Darker blue on hover */
+}
+select {
+    width: 100%; /* Ensures the dropdown spans the full width of the container */
+    padding: 10px; /* Adds spacing inside the dropdown for better readability */
+    margin-bottom: 10px; /* Adds spacing below the dropdown */
+    border: 1px solid #007BFF; /* Adds a subtle blue border */
+    border-radius: 6px; /* Rounds the corners for a softer look */
+    background-color: #f8f9fa; /* Light background for contrast */
+    color: #007BFF; /* Text color matching the border */
+    font-size: 14px; /* Increases font size for better readability */
+    font-weight: bold; /* Makes the text stand out */
+}
+
+select:hover {
+    background-color: #e6f7ff; /* Light blue hover effect */
+    cursor: pointer; /* Changes the cursor to indicate interactivity */
+}
+
+option {
+    padding: 8px; /* Adds padding inside each option */
+    font-size: 14px; /* Ensures options are readable */
+    border-bottom: 1px solid #dee2e6; /* Adds a subtle separator between options */
+}
+
+option:hover {
+    background-color: #007BFF; /* Highlight hovered options */
+    color: white; /* Changes text color on hover */
+}
+/* General style for input, textarea, and select */
+input[type="text"], textarea, select {
+    width: 100%; /* Ensures the fields span the container width */
+    padding: 10px; /* Adds internal spacing */
+    margin-bottom: 10px; /* Spacing between fields */
+    border: 1px solid #007BFF; /* Blue border */
+    border-radius: 6px; /* Rounded corners */
+    background-color: #f8f9fa; /* Light grey background */
+    color: #007BFF; /* Blue text for consistency */
+    font-size: 14px; /* Readable text size */
+    font-weight: bold; /* Bold text for emphasis */
+}
+
+/* Hover effect for input, textarea, and select */
+input[type="text"]:hover, textarea:hover, select:hover {
+    background-color: #e6f7ff; /* Light blue background on hover */
+    cursor: pointer; /* Pointer cursor for interactivity */
+}
+
+/* Focus effect for input, textarea, and select */
+input[type="text"]:focus, textarea:focus, select:focus {
+    outline: none; /* Removes default browser outline */
+    border-color: #0056b3; /* Darker blue border on focus */
+    background-color: #e6f7ff; /* Light blue background on focus */
+}
+
+/* Mantiene le finestre allineate */
+.form-group {
+    display: flex; /* Allinea elementi orizzontalmente */
+    flex-direction: column; /* Dispone gli elementi verticalmente */
+    align-items: flex-start; /* Allinea i contenuti a sinistra */
+    margin-bottom: 20px; /* Spazio tra i gruppi */
+}
+
+/* Style for all dropdowns (single and multiple selection) */
+select {
+    width: 120%; /* Increased width by 20% */
+    max-width: 600px; /* Optional: Set a reasonable max width */
+    padding: 10px;
+    border: 1px solid #007BFF;
+    border-radius: 6px;
+    background-color: #f8f9fa;
+    color: #007BFF;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Specific for multi-selection dropdowns */
+select[multiple] {
+    height: 150px; /* Maintain a manageable height */
+    overflow-y: auto; /* Ensure scrollbar is available if needed */
+}

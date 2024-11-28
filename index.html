@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISO 31000 Risk Assessment</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS for image enhancements */
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .ra-button {
+            max-width: 300px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .ra-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .start-text {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #007BFF;
+            font-weight: bold;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        /* CSS for chapter toggles */
+        .toggle-section {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .toggle-button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px auto;
+            display: block;
+            width: 250px;
+            text-align: center;
+            font-size: 16px;
+        }
+        .toggle-button:hover {
+            background-color: #0056b3;
+        }
+        .toggle-content {
+            display: none;
+            margin-top: 10px;
+            font-size: 14px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to ISO 31000 Risk Assessment</h1>
+        <p>Business Assurance and Certification</p>
+    </div>
+    <div class="content">
+        <div class="image-container">
+            <!-- Enhanced clickable image -->
+            <a href="wizard.html">
+                <img src="RA.png" alt="ISO 31000 Risk Management Process" class="ra-button">
+            </a>
+            <!-- Attention-grabbing text -->
+            <p class="start-text">Click Here to Start the Wizard</p>
+        </div>
+        <div class="description">
+            <!-- Overview Section -->
+            <div class="toggle-section">
+                <button class="toggle-button" onclick="toggleContent('overview')">Overview of ISO 31000 Clauses</button>
+                <div class="toggle-content" id="overview">
+                    <p>ISO 31000 provides a comprehensive framework for managing risk effectively. It outlines principles, a framework, and a structured process to help organizations identify, assess, and mitigate risks while achieving their objectives. The standard is applicable to any organization, regardless of size, sector, or industry.</p>
+                    <p><strong>Clause 4: Principles of Risk Management</strong><br>
+                        Defines the core principles that underpin effective risk management, including integration, structured and comprehensive approach, customization, inclusivity, and continuous improvement.
+                    </p>
+                    <p><strong>Clause 5: Framework for Managing Risk</strong><br>
+                        Describes how organizations should design, implement, and maintain a robust risk management framework. This clause emphasizes leadership and commitment, the integration of risk management into governance and decision-making, and the iterative process of monitoring and improving the framework.
+                    </p>
+                    <p><strong>Clause 6: Risk Management Process</strong><br>
+                        Provides a step-by-step guide for managing risks, detailing specific activities to be performed. This clause emphasizes communication and consultation, context establishment, and the core components of risk assessment: risk identification, risk analysis, and risk evaluation.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Emphasis Section -->
+            <div class="toggle-section">
+                <button class="toggle-button" onclick="toggleContent('emphasis')">Emphasis on Risk Assessment and Its Clauses</button>
+                <div class="toggle-content" id="emphasis">
+                    <p>Risk assessment, a key component of ISO 31000 Clause 6, is detailed in three sub-clauses. This process is critical for understanding and addressing risks effectively:</p>
+                    <ul>
+                        <li><strong>Clause 6.4.2: Risk Identification</strong><br>
+                            Involves identifying the sources of risk, potential events, and their causes and consequences.
+                        </li>
+                        <li><strong>Clause 6.4.3: Risk Analysis</strong><br>
+                            Focuses on understanding the nature of identified risks and their characteristics. This includes analyzing uncertainties, potential consequences, likelihood, and existing controls to estimate the level of risk.
+                        </li>
+                        <li><strong>Clause 6.4.4: Risk Evaluation</strong><br>
+                            Compares the results of risk analysis with established criteria to determine whether further action is required. It helps prioritize risks and decide whether to accept, treat, or monitor them.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Focus Section -->
+            <div class="toggle-section">
+                <button class="toggle-button" onclick="toggleContent('focus')">Focus of the Wizard</button>
+                <div class="toggle-content" id="focus">
+                    <p>The <strong>Risk Assessment Wizard</strong> is designed to focus on these three key clauses of ISO 31000: Risk Identification (6.4.2), Risk Analysis (6.4.3), and Risk Evaluation (6.4.4). By clicking on the image above, you can start the guided risk assessment process.</p>
+                </div>
+            </div>
+
+            <!-- Purpose Section -->
+            <div class="toggle-section">
+                <button class="toggle-button" onclick="toggleContent('purpose')">Purpose of the Wizard</button>
+                <div class="toggle-content" id="purpose">
+                    <p>The purpose of this wizard is twofold:</p>
+                    <ul>
+                        <li><strong>Provide Fundamentals:</strong> It introduces users to the methodology proposed by ISO 31000, ensuring a solid understanding of its principles and processes.</li>
+                        <li><strong>Enable Consistent Data Collection:</strong> It allows users to collect data systematically, helping them focus on all facets that should be considered during risk assessment.</li>
+                    </ul>
+                    <p>The wizard supports decision-making and helps users manage risks in alignment with ISO 31000’s best practices.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript function to toggle content visibility
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            content.style.display = content.style.display === "none" || content.style.display === "" ? "block" : "none";
+        }
+    </script>
+</body>
+</html>

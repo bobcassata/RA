@@ -1,0 +1,410 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk Assessment WIZARD</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Risk Assessment WIZARD</h1>
+        <p> Business Assurance and Certification</p>
+    </div>
+    <div class="wizard-container">
+        <aside class="sidebar">
+            <ul class="steps-list">
+                <li class="step-item active" data-step="0">Step 1: Risk Identification</li>
+                <li class="step-item" data-step="1">Step 2: Risk Analysis (a)</li>
+                <li class="step-item" data-step="2">Step 3: Risk Analysis (b)</li>
+                <li class="step-item" data-step="3">Step 4: Risk Evaluation</li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <div class="step active" id="step-1">
+                <h2>
+                    Step 1: Risk Identification
+                    <span class="help-icon" id="help-icon">❓</span>
+                </h2>
+                <div id="help-text" class="help-text">
+                    <p><strong>ISO 31000 - Section 6.4.2:</strong></p>
+                    <p>Risk identification involves finding, recognizing, and describing risks that could affect the achievement of objectives.</p>
+                </div>
+                <div class="form-group">
+                    <label for="riskName">
+                        Risk Name:
+                        <span class="help-icon" id="help-risk-name">❓</span>
+                    </label>
+                    <div id="help-text-risk-name" class="help-text">
+                        <p>Use a short, descriptive phrase that captures the essence of the risk. Concise and Clear: e.g., “Security Development Lifecycle Process not adopted”</p>
+                    </div>
+                    <input type="text" id="riskName" placeholder="Enter risk name" required>
+                </div>
+                <div class="form-group">
+                    <label for="riskDescription">
+                        Risk Description:
+                        <span class="help-icon" id="help-risk-description">❓</span>
+                    </label>
+                    <div id="help-text-risk-description" class="help-text">
+                        <p>When describing a risk, consider the following elements:</p>
+                        <ul>
+                            <li>Tangible and intangible sources of risk: Identify physical, financial, or reputational factors contributing to the risk.</li>
+                            <li>Causes and events: Specify what triggers the risk and the events that may occur as a result.</li>
+                            <li>Threats and opportunities: Consider both negative (threats) and positive (opportunities) outcomes of the risk.</li>
+                            <li>Vulnerabilities and capabilities: Highlight weaknesses that exacerbate the risk and strengths that mitigate it.</li>
+                            <li>Changes in the external and internal context: Account for evolving environmental, economic, or organizational factors.</li>
+                            <li>Indicators of emerging risks: Look for early signs or trends that could point to future risks.</li>
+                            <li>The nature and value of assets and resources: Include the type and importance of assets at risk.</li>
+                            <li>Consequences and their impact on objectives: Describe potential outcomes and how they affect goals.</li>
+                            <li>Limitations of knowledge and reliability of information: Acknowledge gaps in understanding or inaccuracies in available data.</li>
+                            <li>Time-related factors: Identify deadlines, delays, or timeframes that influence the risk.</li>
+                            <li>Biases, assumptions, and beliefs of those involved: Address subjective influences that could skew the risk assessment.</li>
+                        </ul>
+                    </div>
+                    <textarea id="riskDescription" placeholder="Enter risk description" rows="4"></textarea>
+                </div>
+                <button class="prev-btn" onclick="location.href='index.html'">Back to Home</button>
+                <button class="next-btn" onclick="navigateToStep(1)">Next</button>   
+            </div>
+
+            <div class="step" id="step-2">
+                <h2>
+                    Step 2: Risk Analysis (a)
+                    <span class="help-icon" id="help-step2-risk-analysis">❓</span>
+                </h2>
+                <div id="help-text-step2-risk-analysis" class="help-text">
+                    <p><strong>ISO 31000 - Section 6.4.3:</strong></p>
+                    <p>The purpose of risk analysis is to comprehend the nature of risk and its characteristics including, where appropriate, the level of risk. Risk analysis involves a detailed consideration of uncertainties, risk sources, consequences, likelihood, events, scenarios, controls and their effectiveness. An event can have multiple causes and consequences and can affect multiple objectives.</p>
+                    <p>Risk analysis can be undertaken with varying degrees of detail and complexity, depending on the purpose of the analysis, the availability and reliability of information, and the resources available.</p>
+                    <p>Analysis techniques can be qualitative, quantitative or a combination of these, depending on the circumstances and intended use.</p>
+                    <p>Risk analysis should consider factors such as:</p>
+                    <ul>
+                        <li>the likelihood of events and consequences;</li>
+                        <li>the nature and magnitude of consequences;</li>
+                        <li>complexity and connectivity;</li>
+                        <li>time-related factors and volatility;</li>
+                        <li>the effectiveness of existing controls;</li>
+                        <li>sensitivity and confidence levels.</li>
+                    </ul>
+                    <p>The risk analysis may be influenced by any divergence of opinions, biases, perceptions of risk and judgements. Additional influences are the quality of the information used, the assumptions and exclusions made, any limitations of the techniques and how they are executed. These influences should be considered, documented and communicated to decision makers.</p>
+                    <p>Highly uncertain events can be difficult to quantify. This can be an issue when analysing events with severe consequences. In such cases, using a combination of techniques generally provides greater insight.</p>
+                    <p>Risk analysis provides an input to risk evaluation, to decisions on whether risk needs to be treated and how, and on the most appropriate risk treatment strategy and methods. The results provide insight for decisions, where choices are being made, and the options involve different types and levels of risk.</p>
+                </div>
+                <div class="form-group">
+                    <label for="impactDescription">
+                        Impact Description:
+                        <span class="help-icon" id="help-impact-description">❓</span>
+                    </label>
+                    <div id="help-text-impact-description" class="help-text">
+                        <p>Use AI to find the potential impact.</p>
+                    </div>
+                    <textarea id="impactDescription" placeholder="Describe the impact" rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="severity">
+                        Severity:
+                        <span class="help-icon" id="help-severity">❓</span>
+                    </label>
+                    <div id="help-text-severity" class="help-text">
+                        <p><strong>Risk Severity Definitions:</strong></p>
+                        <ul>
+                            <li><strong>Negligible:</strong> Minimal impact on objectives, with consequences that are easily manageable and have no lasting effect. Example: A minor delay in a non-critical task.</li>
+                            <li><strong>Marginal:</strong> Low-level impact that may cause inconvenience or minor disruptions but does not significantly affect overall objectives. Example: A temporary decrease in productivity.</li>
+                            <li><strong>Critical:</strong> Significant impact on objectives, with consequences that require immediate attention and may result in measurable loss or harm. Example: A production halt causing financial loss or delays.</li>
+                            <li><strong>Catastrophic:</strong> Severe impact that jeopardizes the achievement of objectives, with long-lasting or irreversible consequences. Example: A major data breach or failure leading to legal, financial, or reputational ruin.</li>
+                        </ul>
+                    </div>
+                    <select id="severity">
+                        <option value="Undefined">Undefined</option>
+                        <option value="Negligible">Negligible</option>
+                        <option value="Marginal">Marginal</option>
+                        <option value="Critical">Critical</option>
+                        <option value="Catastrophic">Catastrophic</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="likelihood">
+                        Likelihood:
+                        <span class="help-icon" id="help-likelihood">❓</span>
+                    </label>
+                    <div id="help-text-likelihood" class="help-text">
+                        <p><strong>Likelihood Definitions:</strong></p>
+                        <ul>
+                            <li><strong>Rare:</strong> The event is highly unlikely to occur. Example: Occurs once in 10 years.</li>
+                            <li><strong>Unlikely:</strong> The event could occur but is not expected. Example: Occurs once in 5 years.</li>
+                            <li><strong>Possible:</strong> The event might occur under certain circumstances. Example: Occurs annually.</li>
+                            <li><strong>Probable:</strong> The event is expected to occur in most circumstances. Example: Occurs multiple times a year.</li>
+                        </ul>
+                    </div>
+                    <select id="likelihood">
+                        <option value="Undefined">Undefined</option>
+                        <option value="Rare">Rare</option>
+                        <option value="Unlikely">Unlikely</option>
+                        <option value="Possible">Possible</option>
+                        <option value="Probable">Probable</option>
+                    </select>
+                </div>
+                <button class="prev-btn" onclick="navigateToStep(0)">Back</button>
+                <button class="next-btn" onclick="navigateToStep(2)">Next</button>
+            </div>
+
+            <div class="step" id="step-3">
+                <h2>Step 3: Risk Analysis (b)</h2>
+                <div class="form-group">
+                    <div class="form-group">
+                        <label for="strategicRisk">
+                            Strategic Risk:
+                            <span class="help-icon" id="help-strategic-risk">❓</span>
+                        </label>
+                        <div id="help-text-strategic-risk" class="help-text">
+                            <p><strong>Definition:</strong> Strategic risks are risks that impact high-level objectives and long-term goals of the organization. They typically involve governance, decision-making, or significant external factors.</p>
+                            <p><strong>Examples of Strategic Risks:</strong></p>
+                            <ul>
+                                <li>Approval of a product or service delivery even if quality goals are not met.</li>
+                                <li>Decisions impacting credit or financial aspects, such as cash flow or investments.</li>
+                                <li>Actions that affect infrastructure availability, leading to operational disruptions.</li>
+                                <li>Decisions influencing resources and headcount, such as downsizing or expansion.</li>
+                                <li>Other factors that could significantly influence the organization's strategy</li>
+                            </ul>
+                            <p><strong>Considerations:</strong></p>
+                            <ul>
+                                <li>How does this risk align with or disrupt the organization's mission and vision?</li>
+                                <li>What are the potential long-term consequences of this risk?</li>
+                                <li>How might stakeholders perceive and react to this risk?</li>
+                            </ul>
+                        </div>
+                        <select id="strategicRisk" multiple>
+                            <option value="SR1">Approval of product/service delivery even if the quality goals are not met</option>
+                            <option value="SR2">Decision impacting credit, financial aspects</option>
+                            <option value="SR3">Decision impacting infrastructures availability</option>
+                            <option value="SR4">Decision impacting resources and headcount</option>
+                            <option value="SR5">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="legalRisk">
+                        Legal Risk:
+                        <span class="help-icon" id="help-legal-risk">❓</span>
+                    </label>
+                    <div id="help-text-legal-risk" class="help-text">
+                        <p><strong>Definition:</strong> Legal risks arise from potential violations of laws, regulations, or contractual obligations, which could result in fines, lawsuits, or reputational damage.</p>
+                        <p><strong>Examples of Legal Risks:</strong></p>
+                        <ul>
+                            <li>Intellectual Property (IP): Risks related to unauthorized use, loss, or infringement of patents, copyrights, or trademarks.</li>
+                            <li>Brand Protection and Reputation: Legal challenges affecting public perception of the organization.</li>
+                            <li>Legal Lawsuits: Potential for disputes leading to costly legal proceedings.</li>
+                            <li>Data Protection: Risks arising from non-compliance with data protection policies</li>
+                            <li>Other Legal-related risks.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>Assess the organization's compliance with applicable laws and regulations.</li>
+                            <li>Monitor changes in legal and regulatory environments.</li>
+                            <li>Evaluate the effectiveness of legal safeguards, contracts, and data protection measures.</li>
+                        </ul>
+                    </div>
+                    <select id="legalRisk" multiple>
+                        <option value="LR1">Intellectual Property (IP)</option>
+                        <option value="LR2">Brand Protection and Reputation</option>
+                        <option value="LR3">Legal Lawsuit</option>
+                        <option value="LR4">Data Protection</option>
+                        <option value="LR5">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="operationalRisk">
+                        Operational Risk:
+                        <span class="help-icon" id="help-operational-risk">❓</span>
+                    </label>
+                    <div id="help-text-operational-risk" class="help-text">
+                        <p><strong>Definition:</strong> Operational risks arise from failures in day-to-day processes, systems, or people that can disrupt business activities or result in inefficiencies.</p>
+                        <p><strong>Examples of Operational Risks:</strong></p>
+                        <ul>
+                            <li>Inefficient processes: Processes generating waste of resources, time, or money.</li>
+                            <li>Ineffective processes: Processes that fail to produce the desired results.</li>
+                            <li>KPIs not capturing relevant indicators: Metrics that fail to measure performance effectively, limiting business improvement opportunities.</li>
+                            <li>Process unknown or not adopted: Operational workflows are poorly defined or inconsistently followed.</li>
+                            <li>Other risks affecting the efficiency and effectiveness of operations.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>Evaluate the clarity and adoption of operational processes.</li>
+                            <li>Identify bottlenecks and inefficiencies in workflows.</li>
+                            <li>Ensure KPIs are relevant, measurable, and actionable.</li>
+                            <li>Assess the capability of staff, systems, and tools to support operations effectively.</li>
+                        </ul>
+                    </div>
+                    <select id="operationalRisk" multiple>
+                        <option value="OR1">Inefficient process (process generates waste of resource/time/money/etc.)</option>
+                        <option value="OR2">Ineffective process (process is unable to produce desired results)</option>
+                        <option value="OR3">KPIs are not capturing relevant indicators and/or can’t be used for business improvement</option>
+                        <option value="OR4">Process unknown or not adopted</option>
+                        <option value="OR5">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="complianceRisk">
+                        Compliance Risk:
+                        <span class="help-icon" id="help-compliance-risk">❓</span>
+                    </label>
+                    <div id="help-text-compliance-risk" class="help-text">
+                        <p><strong>Definition:</strong> Compliance risks arise from failure to adhere to laws, regulations, policies, or standards, potentially resulting in penalties, reputational harm, or operational disruptions.</p>
+                        <p><strong>Examples of Compliance Risks:</strong></p>
+                        <ul>
+                            <li>Ability to sell product/service in specific countries: Risks related to regulatory barriers or market access restrictions.</li>
+                            <li>Health and safety compliance: Non-compliance with workplace or product safety standards.</li>
+                            <li>ESD Compliance: Risks involving adherence to electrostatic discharge requirements in manufacturing or product design.</li>
+                            <li>Product/Service limitations: Compliance issues related to accessibility, such as designing for colorblind users.</li>
+                            <li>Compliance with International Standards: Challenges in meeting ISO, GDPR, or other global standards.</li>
+                            <li>Other legal or policy-related risks that affect compliance.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>Identify applicable laws, regulations, and standards for your industry and geography.</li>
+                            <li>Assess the adequacy of compliance policies, procedures, and training.</li>
+                            <li>Monitor and adapt to changes in regulatory requirements.</li>
+                        </ul>
+                    </div>
+                    <select id="complianceRisk" multiple>
+                        <option value="CR1">Ability to sell product/service in specific countries</option>
+                        <option value="CR2">Health and safety compliance</option>
+                        <option value="CR3">ESD Compliance</option>
+                        <option value="CR4">Product/Service limitations (e.g: blind Color GUI)</option>
+                        <option value="CR5">Compliance with International standard</option>
+                        <option value="CR6">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="technicalRisk">
+                        Technical Risk:
+                        <span class="help-icon" id="help-technical-risk">❓</span>
+                    </label>
+                    <div id="help-text-technical-risk" class="help-text">
+                        <p><strong>Definition:</strong> Technical risks arise from the complexity, limitations, or failures of technology, tools, or systems used in projects or operations. These risks can impact the quality, performance, and sustainability of solutions.</p>
+                        <p><strong>Examples of Technical Risks:</strong></p>
+                        <ul>
+                            <li>Testability: Challenges in effectively testing systems or components.</li>
+                            <li>Performance: Risks involving poor system speed, responsiveness, or throughput.</li>
+                            <li>Reliability: Failure of systems to perform consistently under expected conditions.</li>
+                            <li>Availability: Downtime or inability to access systems or services.</li>
+                            <li>Scalability: Difficulties in scaling systems to meet growing demands.</li>
+                            <li>Security: Vulnerabilities that could lead to breaches or data loss.</li>
+                            <li>Maintainability: High costs or difficulties in maintaining systems or solutions.</li>
+                            <li>Other risks affecting technical performance or capabilities.</li>
+                        </ul>
+                        <p><strong>Considerations:</strong></p>
+                        <ul>
+                            <li>Evaluate the adequacy of technical designs and architectures.</li>
+                            <li>Assess the robustness of testing, monitoring, and quality assurance processes.</li>
+                            <li>Review scalability, reliability, and security plans.</li>
+                            <li>Identify potential technical bottlenecks or constraints early in the process.</li>
+                        </ul>
+                    </div>
+                    <select id="technicalRisk" multiple>
+                        <option value="TR1">Testability</option>
+                        <option value="TR2">Performance</option>
+                        <option value="TR3">Reliability</option>
+                        <option value="TR4">Availability</option>
+                        <option value="TR5">Scalability</option>
+                        <option value="TR6">Security</option>
+                        <option value="TR7">Maintainability</option>
+                        <option value="TR8">Other</option>
+                    </select>
+                </div>
+                <button class="prev-btn" onclick="navigateToStep(1)">Back</button>
+                <button class="next-btn" onclick="navigateToStep(3)">Next</button>
+            </div>
+
+            <div class="step" id="step-4">
+                <h2>
+                    Step 4: Risk Evaluation
+                    <span class="help-icon" id="help-risk-evaluation">❓</span>
+                </h2>
+                <div id="help-text-risk-evaluation" class="help-text">
+                    <p><strong>ISO 31000 - Section 6.4.4:</strong></p>
+                    <p>The purpose of risk evaluation is to support decisions. Risk evaluation involves comparing the results of the risk analysis with the established risk criteria to determine where additional action is required.</p>
+                    <p>This can lead to a decision to:</p>
+                    <ul>
+                        <li>do nothing further;</li>
+                        <li>consider risk treatment options;</li>
+                        <li>undertake further analysis to better understand the risk;</li>
+                        <li>maintain existing controls;</li>
+                        <li>reconsider objectives.</li>
+                    </ul>
+                    <p>Decisions should take account of the wider context and the actual and perceived consequences to external and internal stakeholders.</p>
+                    <p>The outcome of risk evaluation should be recorded, communicated and then validated at appropriate levels of the organization.</p>
+                </div>
+                
+    <h3 class="scorecard-title">Business Risk Scorecard</h3>
+    <table id="summary-table">
+        <thead>
+            <tr>
+                <th>Field</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Risk Name</td>
+                <td id="summary-riskName"></td>
+            </tr>
+            <tr>
+                <td>Risk Description</td>
+                <td id="summary-riskDescription"></td>
+            </tr>
+            <tr>
+                <td>Impact Description</td>
+                <td id="summary-impactDescription"></td>
+            </tr>
+            <tr>
+                <td>Severity</td>
+                <td id="summary-severity"></td>
+            </tr>
+            <tr>
+                <td>Likelihood</td>
+                <td id="summary-likelihood"></td>
+            </tr>
+            <tr>
+                <td>Strategic Risk</td>
+                <td id="summary-strategicRisk"></td>
+            </tr>
+            <tr>
+                <td>Legal Risk</td>
+                <td id="summary-legalRisk"></td>
+            </tr>
+            <tr>
+                <td>Operational Risk</td>
+                <td id="summary-operationalRisk"></td>
+            </tr>
+            <tr>
+                <td>Compliance Risk</td>
+                <td id="summary-complianceRisk"></td>
+            </tr>
+            <tr>
+                <td>Technical Risk</td>
+                <td id="summary-technicalRisk"></td>
+            </tr>
+        </tbody>
+    </table>
+    
+                <div class="form-group decision-section">
+                    <label for="decision">Decision:</label>
+                    <select id="decision">
+                        <option value="Do_nothing">Do nothing further</option>
+                        <option value="Consider_options">Consider risk treatment options</option>
+                        <option value="Further_analysis">Undertake further analysis to better understand the risk</option>
+                        <option value="Maintain_controls">Maintain existing controls</option>
+                        <option value="Reconsider_objectives">Reconsider objectives</option>
+                    </select>
+                </div>
+                <button class="prev-btn" onclick="navigateToStep(2)">Back</button>
+                <button id="save-btn">Save to File</button>
+                <button id="finish-btn">Finish</button>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
