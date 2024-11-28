@@ -1,0 +1,30 @@
+RISK ASSESSMENT
+
+Risk Name: Unknown cyber risk security risk exposure
+
+Risk Description: The team is not following the SDL process and has not prepared a Security Risk Plan that includes an assessment of cybersecurity risks.
+Without a proper risk assessment, we cannot fully understand our risk exposure.
+This poses a significant problem for our customers who rely on the product, as well as a reputational risk for our company, its brand, and its shareholders.
+Furthermore, customer assets could potentially be compromised due to vulnerabilities, exposing the company to legal actions and lawsuits.
+
+Impact Description: Customer Trust Erosion: Clients may lose confidence in the product’s reliability and security, potentially impacting customer retention and acquisition.
+Reputational Damage: The company’s brand could suffer, reducing its market competitiveness and tarnishing shareholder confidence
+Financial Loss: Exploited vulnerabilities may result in costly incidents, such as data breaches or operational disruptions, leading to fines, legal settlements, or regulatory penalties.
+Legal Liabilities: Customer assets impacted by unresolved vulnerabilities could trigger lawsuits, further increasing operational and financial strain.
+Business Disruption: Addressing unplanned security incidents consumes resources and shifts focus away from strategic goals, delaying product updates or launches.
+
+Severity: Critical
+
+Likelihood: Probable
+
+Strategic Risk: Approval of product/service delivery even if the quality goals are not met, Decision impacting credit, financial aspects, Decision impacting infrastructures availability, Decision impacting resources and headcount
+
+Legal Risk: Brand Protection and Reputation, Legal Lawsuit, Data Protection
+
+Operational Risk: Process unknown or not adopted
+
+Compliance Risk: Ability to sell product/service in specific countries, Compliance with International standard
+
+Technical Risk: Reliability, Availability, Security, Maintainability
+
+Decision: Consider_options
