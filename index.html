@@ -8,6 +8,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
+        .doc-link {
+            display: inline-block;
+            margin-top: 10px;
+            margin-left: 15px;
+            font-size: 16px;
+            color: white;
+            text-decoration: none;
+        }
+        .doc-link i {
+            margin-right: 5px;
+        }
+        .doc-link:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
         /* Additional CSS for enhancements */
         .image-container {
             text-align: center;
@@ -79,11 +94,18 @@
 </head>
 <body>
     <div class="header">
-        <h1>Welcome to ISO 31000 Risk Assessment</h1>
-        <p>Business Assurance and Certification</p>
-        <a href="mailto:rcassata@cisco.com?subject=Need%20assistance" class="email-link">
-            <i class="fas fa-envelope"></i> 
-        </a>
+        <div class="header">
+            <h1>Welcome to ISO 31000 Risk Assessment</h1>
+            <p>Business Assurance and Certification</p>
+            <!-- Email link -->
+            <a href="mailto:rcassata@cisco.com?subject=Need%20assistance" class="email-link">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <!-- Documentation link -->
+            <a href="RA_doc.html" class="email-link" title="View Documentation" target="_blank">
+                <i class="fas fa-file-alt"></i>
+            </a>
+        </div>
     </div>
     <div class="content">
         <div class="image-container">

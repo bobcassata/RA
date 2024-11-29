@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front-End Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #007BFF;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        section h2 {
+            color: #007BFF;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .code-block {
+            background-color: #f9f9f9;
+            border-left: 4px solid #007BFF;
+            padding: 10px;
+            margin: 10px 0;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Documentation for Risk Assessment Application</h1>
+        <p>Business Assurance and Certification (BAC Team)</p>
+    </header>
+    <section>
+        <h2>1. Overview</h2>
+        <p>This application implements a risk assessment process based on ISO 31000 standards. It guides users through the steps of risk identification, analysis, and evaluation.</p>
+        <p>The application is implemented as a front-end-only solution, ensuring broad accessibility without requiring backend infrastructure.</p>
+    </section>
+    <section>
+        <h2>2. File Organization</h2>
+        <ul>
+            <li><strong>index.html</strong>: Main entry point to the application. Provides an introduction and navigation to the wizard.</li>
+            <li><strong>wizard.html</strong>: Contains the interactive risk assessment wizard.</li>
+            <li><strong>styles.css</strong>: Manages the styling of the application.</li>
+            <li><strong>script.js</strong>: Handles dynamic interactivity and logic for the wizard.</li>
+            <li><strong>README.txt</strong>: Instructions for setting up the application locally.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>3. Technology Stack</h2>
+        <ul>
+            <li><strong>Frontend:</strong> HTML, CSS, JavaScript</li>
+            <li><strong>Libraries:</strong> Google Fonts, FontAwesome</li>
+            <li><strong>Browser Compatibility:</strong> Modern browsers supporting HTML5 and CSS3</li>
+        </ul>
+    </section>
+    <section>
+        <h2>4. Features</h2>
+        <ul>
+            <li>Step-by-step wizard for conducting risk assessments.</li>
+            <li>Dynamic help text toggles to guide users.</li>
+            <li>Export of risk assessment results to a file.</li>
+            <li>Interactive UI with input validation.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>5. Workflow</h2>
+        <p>The application workflow follows these steps:</p>
+        <ol>
+            <li><strong>Step 1: Risk Identification</strong> - Collect risk name and description.</li>
+            <li><strong>Step 2: Risk Analysis Phase 1</strong> - Analyze impact, severity, and likelihood.</li>
+            <li><strong>Step 3: Risk Analysis Phase 2</strong> - Assess specific risks (strategic, legal, operational, etc.).</li>
+            <li><strong>Step 4: Risk Evaluation</strong> - Summarize and export the assessment.</li>
+        </ol>
+    </section>
+    <section>
+        <h2>6. JavaScript Functions</h2>
+        <p>The following JavaScript functions are implemented in the <strong>script.js</strong> file:</p>
+        <ul>
+        <li><strong>getElementById:</strong> This standard JavaScript DOM method is used throughout the script.js file to access elements by their unique ID. It is frequently used for operations such as:
+            <ul>
+                <li>Showing or hiding help text elements (e.g., <code>document.getElementById("help-text").style.display</code>).</li>
+                <li>Capturing user input from form fields (e.g., <code>document.getElementById("riskName").value</code>).</li>
+                <li>Updating the UI dynamically (e.g., populating summary tables).</li>
+            </ul>
+        </li>
+
+            <li><strong>toggleContent(id):</strong> Toggles the visibility of help text elements based on their ID.</li>
+            <li><strong>navigateToStep(stepIndex):</strong> Navigates between wizard steps by activating the specified step.</li>
+            <li><strong>populateSummaryTable():</strong> Fills the summary table in Step 4 with data collected from previous steps.</li>
+            <li><strong>saveToFile():</strong> Exports the risk assessment data to a text file.</li>
+            <li><strong>finishAssessment():</strong> Displays a completion message and clears the page content.</li>
+        </ul>  
+
+    
+    </section>
+    <section>
+        
+    <footer>
+        <p>For inquiries or support, please contact:</p>
+        <p><strong>Email:</strong> <a href="mailto:rcassata@cisco.it">rcassata@cisco.com</a></p>
+        <p>&copy; 2024 Business Assurance and Certification Team</p>
+    </footer>
+</body>
+</html>

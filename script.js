@@ -241,20 +241,6 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("summary-technicalRisk").textContent = riskData.technicalRisk;
     };
 
-
-  //  const populateSummaryTable = () => {
-  //      document.getElementById("summary-riskName").textContent = riskData.riskName || "N/A";
-  //      document.getElementById("summary-riskDescription").textContent = riskData.riskDescription || "N/A";
-  //      document.getElementById("summary-impactDescription").textContent = riskData.impactDescription || "N/A";
-  //      document.getElementById("summary-severity").textContent = riskData.severity || "N/A";
-  //      document.getElementById("summary-likelihood").textContent = riskData.likelihood || "N/A";
-  //      document.getElementById("summary-strategicRisk").textContent = riskData.strategicRisk || "N/A";
-  //      document.getElementById("summary-legalRisk").textContent = riskData.legalRisk || "N/A";
-  //      document.getElementById("summary-operationalRisk").textContent = riskData.operationalRisk || "N/A";
-  //      document.getElementById("summary-complianceRisk").textContent = riskData.complianceRisk || "N/A";
-  //      document.getElementById("summary-technicalRisk").textContent = riskData.technicalRisk || "N/A";
-  //  };
-
     // Add event listeners for navigation buttons
     stepItems.forEach((item, index) => {
         item.addEventListener("click", () => showStep(index));
@@ -300,19 +286,6 @@ document.addEventListener("DOMContentLoaded", () => {
         a.click();
     });
 
-    // Save to File functionality
-    //const saveButton = document.getElementById("save-btn");
-    //if (saveButton) {
-    //    saveButton.addEventListener("click", () => {
-    //        const content = JSON.stringify(riskData, null, 2);
-    //        const blob = new Blob([content], { type: "application/json" });
-    //        const a = document.createElement("a");
-    //        a.href = URL.createObjectURL(blob);
-    //        a.download = "Risk_Assessment.json";
-    //        a.click();
-    //    });
-    //}
 
-    // Initialize to show the first step
     showStep(0);
 });
