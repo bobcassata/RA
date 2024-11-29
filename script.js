@@ -123,6 +123,7 @@ document.getElementById("finish-btn").addEventListener("click", () => {
         <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; font-family: Arial, sans-serif; text-align: center;">
             <h1>Thank You!</h1>
             <p>Your Risk Assessment has been completed </p>
+            <p>If you want to perform another risk assessment, go to the URL section at the top of your browser and press Enter.</p>
         </div>
     `;
 });

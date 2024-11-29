@@ -16,8 +16,8 @@
         <aside class="sidebar">
             <ul class="steps-list">
                 <li class="step-item active" data-step="0">Step 1: Risk Identification</li>
-                <li class="step-item" data-step="1">Step 2: Risk Analysis (a)</li>
-                <li class="step-item" data-step="2">Step 3: Risk Analysis (b)</li>
+                <li class="step-item" data-step="1">Step 2: Risk Analysis Phase 1</li>
+                <li class="step-item" data-step="2">Step 3: Risk Analysis Phase 2</li>
                 <li class="step-item" data-step="3">Step 4: Risk Evaluation</li>
             </ul>
         </aside>
@@ -37,7 +37,8 @@
                         <span class="help-icon" id="help-risk-name">❓</span>
                     </label>
                     <div id="help-text-risk-name" class="help-text">
-                        <p>Use a short, descriptive phrase that captures the essence of the risk. Concise and Clear: e.g., “Unknown cyber risk security risk exposure”</p>
+                        <p>E.g., Unknown cyber risk security risk exposure </p>
+                        <p>Use a short concise and clear descriptive phrase that captures the essence of the risk.</p>
                     </div>
                     <input type="text" id="riskName" placeholder="Enter risk name" required>
                 </div>
@@ -47,6 +48,12 @@
                         <span class="help-icon" id="help-risk-description">❓</span>
                     </label>
                     <div id="help-text-risk-description" class="help-text">
+
+                        <p>E.g., The team is not following the SDL process and has not prepared a Security Risk Plan that includes an assessment of cybersecurity risks.
+                            Without a proper risk assessment, we cannot fully understand our risk exposure.
+                            This poses a significant problem for our customers who rely on the product, as well as a reputational risk for our company, its brand, and its shareholders.
+                            Furthermore, customer assets could potentially be compromised due to vulnerabilities, exposing the company to legal actions and lawsuits.
+                        </p>
                         <p>When describing a risk, consider the following elements:</p>
                         <ul>
                             <li>Tangible and intangible sources of risk: Identify physical, financial, or reputational factors contributing to the risk.</li>
@@ -60,10 +67,6 @@
                             <li>Limitations of knowledge and reliability of information: Acknowledge gaps in understanding or inaccuracies in available data.</li>
                             <li>Time-related factors: Identify deadlines, delays, or timeframes that influence the risk.</li>
                             <li>Biases, assumptions, and beliefs of those involved: Address subjective influences that could skew the risk assessment.</li>
-                            <li>e.g., "The team is not following the SDL process and has not prepared a Security Risk Plan that includes an assessment of cybersecurity risks.
-                                Without a proper risk assessment, we cannot fully understand our risk exposure.
-                                This poses a significant problem for our customers who rely on the product, as well as a reputational risk for our company, its brand, and its shareholders.
-                                Furthermore, customer assets could potentially be compromised due to vulnerabilities, exposing the company to legal actions and lawsuits."</li>
                         </ul>
                     </div>
                     <textarea id="riskDescription" placeholder="Enter risk description" rows="4"></textarea>
@@ -74,7 +77,7 @@
 
             <div class="step" id="step-2">
                 <h2>
-                    Step 2: Risk Analysis (a)
+                    Step 2: Risk Analysis Phase 1
                     <span class="help-icon" id="help-step2-risk-analysis">❓</span>
                 </h2>
                 <div id="help-text-step2-risk-analysis" class="help-text">
@@ -101,12 +104,13 @@
                         <span class="help-icon" id="help-impact-description">❓</span>
                     </label>
                     <div id="help-text-impact-description" class="help-text">
-                        <p>Use AI to find the potential impact.</p>
-                        <p>e.g.,"Customer Trust Erosion: Clients may lose confidence in the product’s reliability and security, potentially impacting customer retention and acquisition.</p>
+                        <p>I suggest using AI to get suggestions on potential impacts.</p>
+                        <p>E.g., </p>
+                        <p>Customer Trust Erosion: Clients may lose confidence in the product’s reliability and security, potentially impacting customer retention and acquisition.</p>
                         <p>Reputational Damage: The company’s brand could suffer, reducing its market competitiveness and tarnishing shareholder confidence</p>
                         <p>Financial Loss: Exploited vulnerabilities may result in costly incidents, such as data breaches or operational disruptions, leading to fines, legal settlements, or regulatory penalties.</p>
                         <p>Legal Liabilities: Customer assets impacted by unresolved vulnerabilities could trigger lawsuits, further increasing operational and financial strain.</p>
-                        <p>Business Disruption: Addressing unplanned security incidents consumes resources and shifts focus away from strategic goals, delaying product updates or launches."</p>
+                        <p>Business Disruption: Addressing unplanned security incidents consumes resources and shifts focus away from strategic goals, delaying product updates or launches.</p>
                     </div>
                     <textarea id="impactDescription" placeholder="Describe the impact" rows="4"></textarea>
                 </div>
@@ -159,7 +163,7 @@
             </div>
 
             <div class="step" id="step-3">
-                <h2>Step 3: Risk Analysis (b)</h2>
+                <h2>Step 3: Risk Analysis Phase 2</h2>
                 <div class="form-group">
                     <div class="form-group">
                         <label for="strategicRisk">
@@ -234,7 +238,8 @@
                             <li>Inefficient processes: Processes generating waste of resources, time, or money.</li>
                             <li>Ineffective processes: Processes that fail to produce the desired results.</li>
                             <li>KPIs not capturing relevant indicators: Metrics that fail to measure performance effectively, limiting business improvement opportunities.</li>
-                            <li>Process unknown or not adopted: Operational workflows are poorly defined or inconsistently followed.</li>
+                            <li>Process unknown: Operational workflows are unknown.</li>
+                            <li>Process not adopted: Operational workflows known but not adopeted.</li>
                             <li>Other risks affecting the efficiency and effectiveness of operations.</li>
                         </ul>
                         <p><strong>Considerations:</strong></p>
@@ -249,8 +254,9 @@
                         <option value="OR1">Inefficient process (process generates waste of resource/time/money/etc.)</option>
                         <option value="OR2">Ineffective process (process is unable to produce desired results)</option>
                         <option value="OR3">KPIs are not capturing relevant indicators and/or can’t be used for business improvement</option>
-                        <option value="OR4">Process unknown or not adopted</option>
-                        <option value="OR5">Other</option>
+                        <option value="OR4">Process unknown</option>
+                        <option value="OR5">Process not adopted</option>
+                        <option value="OR6">Other</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -280,7 +286,7 @@
                         <option value="CR1">Ability to sell product/service in specific countries</option>
                         <option value="CR2">Health and safety compliance</option>
                         <option value="CR3">ESD Compliance</option>
-                        <option value="CR4">Product/Service limitations (e.g: blind Color GUI)</option>
+                        <option value="CR4">Product/Service limitations (e.g.,blind Color GUI)</option>
                         <option value="CR5">Compliance with International standard</option>
                         <option value="CR6">Other</option>
                     </select>
