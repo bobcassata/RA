@@ -295,3 +295,19 @@ select[multiple] {
     height: 150px; /* Maintain a manageable height */
     overflow-y: auto; /* Ensure scrollbar is available if needed */
 }
+
+#save-txt-btn,
+#save-json-btn {
+    background-color: #007BFF; /* Stesso colore del pulsante Finish */
+    color: white; /* Testo bianco */
+    padding: 10px 15px; /* Margini interni */
+    border: none; /* Rimuove i bordi */
+    border-radius: 4px; /* Angoli arrotondati */
+    cursor: pointer; /* Indica interattività */
+    font-size: 16px; /* Dimensione del testo */
+}
+
+#save-txt-btn:hover,
+#save-json-btn:hover {
+    background-color: #0056b3; /* Colore blu più scuro al passaggio del mouse */
+}
