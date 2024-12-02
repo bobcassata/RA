@@ -192,11 +192,27 @@
             if (textBox.style.display === "none" || textBox.style.display === "") {
                 textBox.style.display = "block"; // Show the box
                 toggleContent.style.display = "block"; // Show the content
+
+                // Scroll to the element smoothly
+                textBox.scrollIntoView({ behavior: "smooth", block: "center" });
             } else {
                 textBox.style.display = "none"; // Hide the box
                 toggleContent.style.display = "none"; // Hide the content
             }
         }
+        //function toggleContent(id) {
+        //    const textBox = document.getElementById(id).parentElement; // Get the parent 'text-box'
+        //    const toggleContent = document.getElementById(id); // Get the inner content
+        //
+        //    // Toggle visibility of both the text-box and toggle-content
+        //    if (textBox.style.display === "none" || textBox.style.display === "") {
+        //        textBox.style.display = "block"; // Show the box
+        //        toggleContent.style.display = "block"; // Show the content
+        //    } else {
+        //        textBox.style.display = "none"; // Hide the box
+        //        toggleContent.style.display = "none"; // Hide the content
+        //    }
+        //}
         //function toggleContent(id) {
         //    const content = document.getElementById(id);
         //    content.style.display = content.style.display === "none" || content.style.display === "" ? "block" : "none";
