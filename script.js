@@ -262,6 +262,51 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     document.getElementById("save-btn").addEventListener("click", () => {
+        // Initialize content for the .txt file
+        let txtContent = "RISK ASSESSMENT\n\n";
+        txtContent += `Risk Name: ${document.getElementById("summary-riskName").textContent || ""}\n\n`;
+        txtContent += `Risk Description: ${document.getElementById("summary-riskDescription").textContent || ""}\n\n`;
+        txtContent += `Impact Description: ${document.getElementById("summary-impactDescription").textContent || ""}\n\n`;
+        txtContent += `Severity: ${document.getElementById("summary-severity").textContent || ""}\n\n`;
+        txtContent += `Likelihood: ${document.getElementById("summary-likelihood").textContent || ""}\n\n`;
+        txtContent += `Strategic Risk: ${document.getElementById("summary-strategicRisk").textContent || ""}\n\n`;
+        txtContent += `Legal Risk: ${document.getElementById("summary-legalRisk").textContent || ""}\n\n`;
+        txtContent += `Operational Risk: ${document.getElementById("summary-operationalRisk").textContent || ""}\n\n`;
+        txtContent += `Compliance Risk: ${document.getElementById("summary-complianceRisk").textContent || ""}\n\n`;
+        txtContent += `Technical Risk: ${document.getElementById("summary-technicalRisk").textContent || ""}\n\n`;
+        txtContent += `Decision: ${document.getElementById("decision").value || ""}\n`;
+    
+        // Create .txt file
+        const txtBlob = new Blob([txtContent], { type: "text/plain" });
+        const txtLink = document.createElement("a");
+        txtLink.href = URL.createObjectURL(txtBlob);
+        txtLink.download = "Risk_Assessment.txt";
+        txtLink.click();
+    
+        // Prepare data for the .json file
+        const jsonData = {
+            riskName: document.getElementById("summary-riskName").textContent || "",
+            riskDescription: document.getElementById("summary-riskDescription").textContent || "",
+            impactDescription: document.getElementById("summary-impactDescription").textContent || "",
+            severity: document.getElementById("summary-severity").textContent || "",
+            likelihood: document.getElementById("summary-likelihood").textContent || "",
+            strategicRisk: document.getElementById("summary-strategicRisk").textContent || "",
+            legalRisk: document.getElementById("summary-legalRisk").textContent || "",
+            operationalRisk: document.getElementById("summary-operationalRisk").textContent || "",
+            complianceRisk: document.getElementById("summary-complianceRisk").textContent || "",
+            technicalRisk: document.getElementById("summary-technicalRisk").textContent || "",
+            decision: document.getElementById("decision").value || ""
+        };
+    
+        // Create .json file
+        const jsonBlob = new Blob([JSON.stringify(jsonData, null, 2)], { type: "application/json" });
+        const jsonLink = document.createElement("a");
+        jsonLink.href = URL.createObjectURL(jsonBlob);
+        jsonLink.download = "Risk_Assessment.json";
+        jsonLink.click();
+    });
+    /*
+    document.getElementById("save-btn").addEventListener("click", () => {
         // Inizializza il contenuto del file
         let content = "RISK ASSESSMENT\n\n";
     
@@ -285,6 +330,7 @@ document.addEventListener("DOMContentLoaded", () => {
         a.download = "Risk_Assessment.txt"; // Nome del file
         a.click();
     });
+    */
 
 
     showStep(0);
